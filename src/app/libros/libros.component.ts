@@ -14,7 +14,7 @@ export class LibrosComponent {
 
   ngOnInit(){
     this.libroService.getLibros().subscribe((data) => {
-
+      this.datos = data;
     })
 
   }

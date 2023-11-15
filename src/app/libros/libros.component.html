@@ -1,2 +1,25 @@
 <app-header></app-header>
-<p>libros works!</p>
+<div *ngIf="datos">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Listado de Canciones</h5>
+      <table class="table table-bordered table-stripes">
+        <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Autor</th>
+          <th>Biblioteca</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of datos">
+          <td>{{item.nombre}}</td>
+          <td>{{item.autor}}</td>
+          <td>{{item.biblioteca.nombre}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<br>
